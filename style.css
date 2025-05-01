@@ -20,6 +20,8 @@
     --font-family-ques: "Questrial", sans-serif;
     --font-family-lato: "Lato", sans-serif;
     --font-family-gest: "Geist", sans-serif;
+    --font-family-vet: "Be Vietnam Pro", sans-serif;
+    --font-family-inter: "Inter", sans-serif;;
 }
 
 
@@ -67,6 +69,12 @@
 }
 .font_gest{
     font-family: var(--font-family-gest);
+}
+.font_vet{
+    font-family: var(--font-family-vet);
+}
+.font_inter{
+    font-family: var(--font-family-inter);
 }
 
 
