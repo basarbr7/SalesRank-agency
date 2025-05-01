@@ -1,0 +1,80 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-bg-main: #E7E7E7;
+    --color-white: #FFFFFF;
+    --color-blue: #002868;
+    --color-dark-blue: #171D25;
+    --color-green: #06B217;
+    --color-light-green: #44D618;
+    --color-gray: #6D6D6D;
+    --color-light-gray: #909090;
+    --color-light: #DFDFDF;
+    --font-family-mano: "Manrope", sans-serif;
+    --font-family-poppins:  "Poppins", sans-serif;
+    --font-family-ques: "Questrial", sans-serif;
+    --font-family-lato: "Lato", sans-serif;
+    --font-family-gest: "Geist", sans-serif;
+}
+
+
+.header-animation {
+    animation: headerSticky 0.7s ease-in-out forwards;
+}
+
+@keyframes headerSticky {
+    0% {
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}  
+
+.bgmain{
+    background-color: var(--color-bg-main);
+}
+
+.my-container{
+    width: 1440px;
+    margin: 0 auto;
+}
+.font_mano{
+    font-family: var(--font-family);
+}
+.font_pop{
+    font-family: var(--font-family-poppins);
+}
+.font_ques{
+    font-family: var(--font-family-ques);
+}
+.font_lato{
+    font-family: var(--font-family-lato);
+}
+.font_gest{
+    font-family: var(--font-family-gest);
+}
+
+
+
+.ai-bg{
+    background: linear-gradient(to right, #103570 0% , #004FCE 100% );
+}
+/* tracking-[-0.04em] */
+
+/* 103570 0% */
+/* 004FCE 100% */

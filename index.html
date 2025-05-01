@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font start-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font end-->
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="scroll-smooth">
+    <nav id="nav" class="bgmain py-7 shadow-md z-50 w-full">
+      <div class="my-container flex justify-between items-center">
+        <!-- Left: Logo & Links -->
+        <div class="flex items-center justify-between gap-[74px]">
+          <div class="logo">
+            <img
+              src="./images/nav_logo.png"
+              alt="SalesRank Logo"
+              class="object-cover h-12 w-auto"
+            />
+          </div>
+
+          <!-- Desktop Nav Links -->
+          <div class="hidden md:flex space-x-8 capitalize">
+            <a href="#home" class="hover:text-blue-400">Home</a>
+            <a href="#about" class="hover:text-blue-400">About</a>
+            <a href="#contact" class="hover:text-blue-400">Pricing</a>
+            <a href="#contact" class="hover:text-blue-400">Consulting</a>
+            <a href="#faq" class="hover:text-blue-400">AI Coach</a>
+          </div>
+        </div>
+
+        <!-- Right: Button + Mobile Menu Toggle -->
+        <div class="flex items-center gap-4">
+          <div
+            class="hidden md:flex px-[35px] py-[13px] capitalize items-center justify-center border border-[#010205] rounded-full"
+          >
+            <a href="#" class="">Get Started</a>
+          </div>
+
+          <!-- Hamburger -->
+          <button id="menu-toggle" class="md:hidden text-black">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden px-4 mt-3 hidden flex-col gap-2">
+        <a href="#home" class="block py-2 hover:bg-gray-200 rounded">Home</a>
+        <a href="#about" class="block py-2 hover:bg-gray-200 rounded">About</a>
+        <a href="#contact" class="block py-2 hover:bg-gray-200 rounded"
+          >Pricing</a
+        >
+        <a href="#contact" class="block py-2 hover:bg-gray-200 rounded"
+          >Consulting</a
+        >
+        <a href="#faq" class="block py-2 hover:bg-gray-200 rounded">AI Coach</a>
+        <div
+          class="w-full border border-[#010205] rounded-full text-center py-2 mt-2"
+        >
+          <a href="#">Get Started</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero section  -->
+    <section id="hero" class="pt-[190px] pb-[84px] bg-slate-200">
+      <div
+        class="my-container flex flex-col md:flex-row md:justify-between items-start relative"
+      >
+        <!-- text part -->
+        <div class="text-part flex flex-col gap-7">
+          <h1
+            class="max-w-[500px] .font_mano text-[80px] font-medium tracking-[-0.01em]"
+          >
+            Your AI-Powered Sales Coach
+          </h1>
+
+          <div class="flex flex-col gap-[92px]">
+            <!-- small ai image -->
+            <div class="flex items-center gap-[68px]">
+              <div class="w-[204px] h-[198px] rounded-[20px] overflow-hidden">
+                <img src="./images/ai-small.png" alt="AI image" />
+              </div>
+              <p
+                class="max-w-[346px] font_mano text-xl font-medium leading-[163%]"
+              >
+                Get real-time coaching, script suggestions, and deal-closing
+                strategies powered by advanced AI technology.
+              </p>
+            </div>
+
+            <div class="flex items-center gap-14">
+              <div class="flex items-center gap-[34px]">
+                <div
+                  class="w-[89px] h-[86px] bg-white flex items-center justify-center rounded-2xl"
+                >
+                  <img src="./images/backup_table.png" alt="image" />
+                </div>
+                <div class="font_mano">
+                  <h4
+                    class="text-[40px] font-semibold tracking-[-0.01em] leading-[110%] mb-1"
+                  >
+                    2000+
+                  </h4>
+                  <p class="font-medium text-xl leading-[163%]">
+                    Your protection
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-[34px]">
+                <div
+                  class="w-[89px] h-[86px] bg-white flex items-center justify-center rounded-2xl"
+                >
+                  <img src="./images/3dot.png" alt="image" />
+                </div>
+                <div class="font_mano">
+                  <h4
+                    class="text-[40px] font-semibold tracking-[-0.01em] leading-[110%] mb-1"
+                  >
+                    7001+
+                  </h4>
+                  <p class="font-medium text-xl leading-[163%]">
+                    Provide tailored
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- image part -->
+        <div class="image-part">
+          <img src="./images/ai_image.png" alt="AI image" />
+        </div>
+
+        <!-- cart -->
+        <div
+          class="absolute right-[283px] bottom-0 bg-white px-[27px] rounded-[27px]"
+        >
+          <div
+            class="flex items-center gap-[140px] font_mano font-semibold text-[50px] pt-[50px] mb-[23px]"
+          >
+            <span>721+</span>
+            <span>1000+</span>
+          </div>
+          <p class="mb-[39px] font_mano text-[28px] font-semibold">
+            Growth is our priority.
+          </p>
+          <p
+            class="max-w-[407px] text-[17px] font-medium font_pop leading-[163%] pb-[57px]"
+          >
+            As a full-service business agency, we specialize in helping
+            companies of all sizes optimize their operations
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- live AI section -->
+    <section id="AI" class="ai-bg pt-9 pb-[70px]">
+      <div class="my-container">
+        <p class="text-2xl font_ques text-[#FCE38A] tracking-[-0.01em] mb-5">
+          Live Ai Coach
+        </p>
+        <h3
+          class="font_ques text-6xl leading-[120%] tracking-[-0.01em] text-white"
+        >
+          Take a Suggestion Coaching
+        </h3>
+
+        <div class="flex items-center gap-6 mt-[60px]">
+          <!-- ai chat box -->
+          <div
+            class="max-w-[787px] rounded-xl shadow-lg overflow-hidden border border-[#F2F3F3] bg-[#F2F3F3]"
+          >
+            <!-- Header -->
+            <div
+              class="bg-white pt-4 pb-6 pl-8 font-bold border-b border-gray-200 leading-[120%] font_mano"
+            >
+              AI Sales Coach
+            </div>
+            <!-- Message area -->
+            <div class="px-4 py-5 pb-[273px]">
+              <div class="flex items-start gap-6">
+                <!-- placeholder -->
+                <div class="w-10 h-10 bg-[#D9D9D9] rounded-full"></div>
+                <!-- Message bubble -->
+                <div
+                  class="bg-white px-4 py-2 rounded-lg  text-lg font_lato leading-8 max-w-[85%]"
+                >
+                  Hello! I'm your AI sales coach. How can I help you improve
+                  your sales performance today?
+                </div>
+              </div>
+            </div>
+
+            <!-- input area  -->
+            <div class="bg-white px-[30px] pt-4 pb-6 flex flex-col gap-4">
+              <!-- Suggestions -->
+              <div
+                class="flex flex-wrap gap-3 text-[#002868] font_gest text-sm"
+              >
+                <button
+                  class="bg-[#EBEEF3] text-sm px-[17px] py-3 rounded-[36px] leading-[100%] tracking-[-0.04em] hover:bg-gray-200"
+                >
+                  How do I handle objections?
+                </button>
+                <button
+                  class="bg-[#EBEEF3] text-sm px-[17px] py-3 rounded-[36px] leading-[100%] tracking-[-0.04em] hover:bg-gray-200"
+                >
+                  Give me a cold email template
+                </button>
+                <button
+                  class="bg-[#EBEEF3] text-sm px-[17px] py-3 rounded-[36px] leading-[100%] tracking-[-0.04em] hover:bg-gray-200"
+                >
+                  Closing techniques
+                </button>
+                <button
+                  class="bg-[#EBEEF3] text-sm px-[17px] py-3 rounded-[36px] leading-[100%] tracking-[-0.04em] hover:bg-gray-200"
+                >
+                  Negotiation tips
+                </button>
+              </div>
+
+              <!-- Input area -->
+              <div class="flex items-center gap-3">
+                <input
+                  type="text"
+                  placeholder="Ask anything you need"
+                  class="flex-1 px-[23px] py-[17px] border border-[#E5E7EB] rounded text-sm focus:outline-none"
+                />
+                <button
+                  class="bg-[#002868] text-white p-[14px] rounded-lg text-lg font_gest leading-[100%] tracking-[-0.04em] font-medium"
+                >
+                  <span>Send</span>
+                  <i class="fa-solid fa-arrow-up ml-3"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- middle part -->
+          <div class="bg-white flex items-center justify-center rounded-[57px]">
+            <div
+              class="flex items-center justify-center flex-col gap-10 p-6 text-2xl"
+            >
+              <i class="fa-solid fa-rotate"></i>
+              <i class="fa-regular fa-thumbs-up"></i>
+              <i class="fa-regular fa-thumbs-down transform -scale-x-100"></i>
+              <i class="fa-regular fa-clipboard"></i>
+              <i class="fa-solid fa-volume-low"></i>
+            </div>
+          </div>
+          <!-- right part -->
+          <div class="flex flex-col gap-6">
+
+            <div class="p-[30px] bg-[#EFEFEF] rounded-[20px]">
+              <h3 class="font_mano text-[32px] font-bold">
+                Real-time Analysis
+              </h3>
+
+              <div class="bg-white rounded-xl p-4 mb-5 border border-[#E7E7E7]">
+                <div class="flex items-center gap-2 mb-2">
+                  <i class="fa-solid fa-circle-check text-[#06B217]"></i>
+                  <p class="text-lg font-semibold font_mano leading-[132%]">
+                    Confidence Level
+                  </p>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="flex gap-2 items-center">
+                  <div class="relative w-[443px] h-2 rounded-full bg-[#DFDFDF] overflow-hidden ">
+                    <div class="absolute top-0 left-0 h-full bg-green-500 rounded-full"
+                      style="width: 60%"></div>
+                  </div>
+                  <span>60%</span>
+                </div>
+              </div>
+
+              <div class="bg-white border border-[#E7E7E7] rounded-xl p-4 text-2xl">
+                <i class="fa-solid fa-chart-line mt-1"></i>
+                <span class="text-lg font-semibold font_mano leading-[132%]">Confidence Level</span>
+                <p class="font_lato text-lg leading-8 mt-3">85% improvement in objection handling</p>
+              </div>
+
+            </div>
+
+            <div class="p-[30px] bg-[#EFEFEF] rounded-[20px]">
+              <h3 class="font_mano text-[32px] font-bold">Quick Actions</h3>
+              <div class="flex ">
+                <div class="bg-white p-16 rounded-xl border border-[#E7E7E7]"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
