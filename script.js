@@ -39,3 +39,41 @@ document.addEventListener("DOMContentLoaded", function () {
        });
      });
    });
+
+
+  //  slider part
+  const sliderWrapper = document.querySelector(".slider");
+  const slides = document.querySelectorAll(".slide");
+  const totalSlides = slides.length;
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+  const currentSlideText = document.querySelector(".prevText");
+
+  let currentIndex = 0;
+
+  function updateSlider(index) {
+    sliderWrapper.style.transform = `translateX(-${index * 100}%)`;
+    currentSlideText.textContent = String(index + 1).padStart(2, "0");
+  }
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = 0;
+    }
+    updateSlider(currentIndex);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex++;
+    if (currentIndex >= totalSlides) {
+      currentIndex = totalSlides - 1;
+    }
+    updateSlider(currentIndex);
+  });
+
+
+  updateSlider(currentIndex);
+
+
+

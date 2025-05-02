@@ -77,11 +77,17 @@
     font-family: var(--font-family-inter);
 }
 
-
-
-.ai-bg{
+.gradient-bg{
     background: linear-gradient(to right, #103570 0% , #004FCE 100% );
 }
+
+.slider {
+    display: none;
+  }
+
+  .slider.active {
+    display: block;
+  }
 /* tracking-[-0.04em] */
 
 /* 103570 0% */
