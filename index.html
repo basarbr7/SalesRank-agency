@@ -28,8 +28,9 @@
   </head>
 
   <body class="scroll-smooth relative">
-
-    <div class="absolute top-[-320px] left-[-345px]  md:top-[-220px] md:left-[-245px] rs-gradient"></div>
+    <div
+      class="absolute top-[-320px] left-[-345px] md:top-[-220px] md:left-[-245px] rs-gradient"
+    ></div>
     <!--================= navbar section ===================-->
     <nav
       id="nav"
@@ -237,7 +238,7 @@
                 <div class="flex items-start gap-6">
                   <div class="w-10 h-10 bg-[#D9D9D9] rounded-full"></div>
                   <div
-                    class="bg-white px-4 py-2 rounded-lg text-base md:text-lg font_lato leading-8 max-w-[70%] md:max-w-[85%]"
+                    class="bg-white px-4 py-2 rounded-lg text-sm md:text-lg font_lato sm:leading-8 max-w-[70%] md:max-w-[85%]"
                   >
                     Hello! I'm your AI sales coach. How can I help you improve
                     your sales performance today?
@@ -247,7 +248,9 @@
             </div>
 
             <!-- input area  -->
-            <div class="bg-white px-[30px] pt-4 pb-6 flex flex-col gap-4">
+            <div
+              class="bg-white px-5 sm:px-[30px] pt-4 pb-6 flex flex-col gap-4"
+            >
               <!-- Suggestions -->
               <div
                 class="flex flex-wrap gap-3 text-[#002868] font_gest text-sm"
@@ -276,10 +279,13 @@
 
               <!-- Input area -->
               <div class="flex items-center gap-3">
-                <input type="text" placeholder="Ask anything you need"
+                <input
+                  type="text"
+                  placeholder="Ask anything you need"
                   class="max-w-[600px] flex-1 px-2 md:px-[23px] py-[17px] border border-[#E5E7EB] rounded text-sm focus:outline-none"
                 />
-                <button id="submit_btn"
+                <button
+                  id="submit_btn"
                   class="bg-[#002868] text-white p-2 py-3 sm:p-[14px] rounded-lg text-base sm:text-lg font_gest leading-[100%] tracking-[-0.04em] font-medium text-center"
                 >
                   <span>Send</span>
