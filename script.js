@@ -31,10 +31,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // chat part
 
-  const input = document.querySelector("input")
-  const submitBtn =document.querySelector(".submit_btn")
-  const output = document.querySelector("#output")
+  const input = document.querySelector("input");
+  const submitBtn = document.querySelector("#submit_btn");
+  const output = document.querySelector("#output");
+  
+  submitBtn.addEventListener("click", () => {
+    const inputValue = input.value.trim();
+  
+    if (inputValue !== "") {
+    
+      const messageWrapper = document.createElement("div");
+      messageWrapper.className = "flex items-start gap-6 mt-4";
+  
+ 
+      const avatar = document.createElement("div");
+      avatar.className = "w-10 h-10 bg-blue-300 rounded-full";
+  
+      const messageBox = document.createElement("div");
+      messageBox.className =
+        "bg-white px-4 py-2 rounded-lg text-base md:text-lg font_lato leading-8 max-w-[70%] md:max-w-[85%]";
+      messageBox.textContent = inputValue;
+  
+      messageWrapper.appendChild(avatar);
+      messageWrapper.appendChild(messageBox);
 
+      output.appendChild(messageWrapper);
+  
+      input.value = "";
+    }
+  });
   
 
 
