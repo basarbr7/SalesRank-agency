@@ -88,6 +88,17 @@
   .slider.active {
     display: block;
   }
+
+
+
+  .rs-gradient{
+    width: 655px;
+    height: 655px;
+    background: #6797FF;
+    border-radius: 500px;
+    filter: blur(1000px);
+  }
+
 /* tracking-[-0.04em] */
 
 /* 103570 0% */
