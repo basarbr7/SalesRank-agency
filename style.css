@@ -51,8 +51,8 @@
     background-color: var(--color-bg-main);
 }
 
-.my-container{
-    width: 1440px;
+.myContainer{
+    max-width: 1440px;
     margin: 0 auto;
 }
 .font_mano{
@@ -92,3 +92,4 @@
 
 /* 103570 0% */
 /* 004FCE 100% */
+/* px-4 xl:px-0 */

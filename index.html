@@ -28,10 +28,11 @@
   </head>
 
   <body class="scroll-smooth">
-    <nav id="nav" class="bgmain py-7 shadow-md z-50 w-full">
-      <div class="my-container flex justify-between items-center">
+    <!--================= navbar section ===================-->
+    <nav id="nav" class="mt-[30px] py-4 px-3 lg:px-0 md:px-0 z-50 absolute w-full top-0">
+      <div class="myContainer px-4 xl:px-0 flex justify-between items-center">
         <!-- Left: Logo & Links -->
-        <div class="flex items-center justify-between gap-[74px]">
+        <div class="flex items-center justify-between md:gap-5 lg:gap-[74px]">
           <div class="logo">
             <img
               src="./images/nav_logo.png"
@@ -41,7 +42,7 @@
           </div>
 
           <!-- Desktop Nav Links -->
-          <div class="hidden md:flex space-x-8 capitalize">
+          <div class="hidden md:flex md:space-x-4 lg:space-x-8 capitalize">
             <a href="#home" class="hover:text-blue-400">Home</a>
             <a href="#about" class="hover:text-blue-400">About</a>
             <a href="#contact" class="hover:text-blue-400">Pricing</a>
@@ -53,26 +54,17 @@
         <!-- Right: Button + Mobile Menu Toggle -->
         <div class="flex items-center gap-4">
           <div
-            class="hidden md:flex px-[35px] py-[13px] capitalize items-center justify-center border border-[#010205] rounded-full"
+            class="hidden md:flex px-5 py-3 lg:px-[35px] lg:py-[13px] capitalize items-center justify-center border border-[#010205] rounded-full"
           >
             <a href="#" class="">Get Started</a>
           </div>
 
-          <!-- Hamburger -->
-          <button id="menu-toggle" class="md:hidden text-black">
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
+          <!-- Hamburger toggle button-->
+          <button
+            id="menu-toggle"
+            class="md:hidden text-black px-3 py-2 border border-black rounded-md"
+          >
+            <i class="fa-solid fa-list"></i>
           </button>
         </div>
       </div>
@@ -96,24 +88,30 @@
       </div>
     </nav>
 
-    <!-- hero section  -->
-    <section id="hero" class="pt-[190px] pb-[84px] bg-slate-200">
+    <!-- ================banner section================ -->
+    <section id="banner" class="pt-[200px] pb-[84px]">
       <div
-        class="my-container flex flex-col md:flex-row md:justify-between items-start relative"
+        class="myContainer px-4 xl:px-0 flex flex-col md:flex-row gap-y-14 md:gap-y-0 md:justify-between items-start relative"
       >
         <!-- text part -->
         <div class="text-part flex flex-col gap-7">
           <h1
-            class="max-w-[500px] .font_mano text-[80px] font-medium tracking-[-0.01em]"
+            class="max-w-[500px] .font_mano text-5xl lg:text-[80px] font-medium tracking-[-0.01em]"
           >
             Your AI-Powered Sales Coach
           </h1>
 
           <div class="flex flex-col gap-[92px]">
             <!-- small ai image -->
-            <div class="flex items-center gap-[68px]">
-              <div class="w-[204px] h-[198px] rounded-[20px] overflow-hidden">
-                <img src="./images/ai-small.png" alt="AI image" />
+            <div
+              class="flex flex-col sm:flex-row md:items-center gap-6 md:gap-10 lg:gap-[68px]"
+            >
+              <div class="overflow-hidden rounded-[20px]">
+                <img
+                  src="./images/ai-small.png"
+                  alt="AI image"
+                  class="object-cover rounded-[20px]"
+                />
               </div>
               <p
                 class="max-w-[346px] font_mano text-xl font-medium leading-[163%]"
@@ -123,8 +121,8 @@
               </p>
             </div>
 
-            <div class="flex items-center gap-14">
-              <div class="flex items-center gap-[34px]">
+            <div class="flex items-center justify-center gap-14">
+              <div class="flex flex-col sm:flex-row items-center gap-[34px]">
                 <div
                   class="w-[89px] h-[86px] bg-white flex items-center justify-center rounded-2xl"
                 >
@@ -142,7 +140,7 @@
                 </div>
               </div>
 
-              <div class="flex items-center gap-[34px]">
+              <div class="flex flex-col sm:flex-row items-center gap-[34px]">
                 <div
                   class="w-[89px] h-[86px] bg-white flex items-center justify-center rounded-2xl"
                 >
@@ -163,16 +161,27 @@
           </div>
         </div>
         <!-- image part -->
-        <div class="image-part">
-          <img src="./images/ai_image.png" alt="AI image" />
+        <div class="image-part hidden md:flex max-w-[583px]">
+          <img
+            src="./images/ai_image.png"
+            alt="AI image"
+            class="w-full object-cover"
+          />
+        </div>
+        <div class="image-part max-w-[420px] md:hidden">
+          <img
+            src="./images/ai_image.png"
+            alt="AI image"
+            class="w-full object-cover"
+          />
         </div>
 
         <!-- cart -->
         <div
-          class="absolute right-[283px] bottom-0 bg-white px-[27px] rounded-[27px]"
+          class="absolute hidden xl:block md-w-[350px] max-w-[460px] left-[670px] bottom-0 bg-white px-[27px] rounded-[27px]"
         >
           <div
-            class="flex items-center gap-[140px] font_mano font-semibold text-[50px] pt-[50px] mb-[23px]"
+            class="flex items-center gap-14 xl:gap-[140px] font_mano font-semibold text-[50px] pt-[50px] mb-[23px]"
           >
             <span>721+</span>
             <span>1000+</span>
@@ -190,22 +199,21 @@
       </div>
     </section>
 
-    <!-- live AI section -->
+    <!-- =================Live ai part =================-->
     <section id="AI" class="gradient-bg pt-9 pb-[70px]">
-      <div class="my-container">
+      <div class="myContainer px-4 xl:px-0">
         <p class="text-2xl font_ques text-[#FCE38A] tracking-[-0.01em] mb-5">
           Live Ai Coach
         </p>
         <h3
-          class="font_ques text-6xl leading-[120%] tracking-[-0.01em] text-white"
+          class="font_ques text-3xl md:text-6xl leading-[120%] tracking-[-0.01em] text-white"
         >
           Take a Suggestion Coaching
         </h3>
-
-        <div class="flex items-center gap-6 mt-[60px]">
+        <div class="flex flex-col md:flex-row items-center gap-6 mt-[60px]">
           <!-- ai chat box -->
           <div
-            class="max-w-[787px] rounded-xl shadow-lg overflow-hidden border border-[#F2F3F3] bg-[#F2F3F3]"
+            class="rounded-xl shadow-lg overflow-hidden border border-[#F2F3F3] bg-[#F2F3F3]"
           >
             <!-- Header -->
             <div
@@ -213,15 +221,10 @@
             >
               AI Sales Coach
             </div>
-            <!-- Message area -->
             <div class="px-4 py-5 pb-[273px]">
-              <div class="flex items-start gap-6">
-                <!-- placeholder -->
+              <div id="output" class="flex items-start gap-6">
                 <div class="w-10 h-10 bg-[#D9D9D9] rounded-full"></div>
-                <!-- Message bubble -->
-                <div
-                  class="bg-white px-4 py-2 rounded-lg text-lg font_lato leading-8 max-w-[85%]"
-                >
+                <div class="bg-white px-4 py-2 rounded-lg text-base md:text-lg font_lato leading-8 max-w-[70%] md:max-w-[85%]">
                   Hello! I'm your AI sales coach. How can I help you improve
                   your sales performance today?
                 </div>
@@ -261,10 +264,10 @@
                 <input
                   type="text"
                   placeholder="Ask anything you need"
-                  class="flex-1 px-[23px] py-[17px] border border-[#E5E7EB] rounded text-sm focus:outline-none"
+                  class="flex-1 px-3 md:px-[23px] py-[17px] border border-[#E5E7EB] rounded text-sm focus:outline-none"
                 />
-                <button
-                  class="bg-[#002868] text-white p-[14px] rounded-lg text-lg font_gest leading-[100%] tracking-[-0.04em] font-medium"
+                <button id="submit_btn"
+                  class="bg-[#002868] text-white p-[10px] sm:p-[14px] rounded-lg text-lg font_gest leading-[100%] tracking-[-0.04em] font-medium text-center"
                 >
                   <span>Send</span>
                   <i class="fa-solid fa-arrow-up ml-3"></i>
@@ -274,9 +277,11 @@
           </div>
 
           <!-- middle part -->
-          <div class="bg-white flex items-center justify-center rounded-[57px]">
+          <div
+            class="bg-white hidden xl:flex items-center justify-center rounded-[57px]"
+          >
             <div
-              class="flex items-center justify-center flex-col gap-10 p-6 text-2xl"
+              class="flex items-center justify-center md:flex-col gap-10 p-6 text-2xl"
             >
               <i class="fa-solid fa-rotate"></i>
               <i class="fa-regular fa-thumbs-up"></i>
@@ -285,10 +290,26 @@
               <i class="fa-solid fa-volume-low"></i>
             </div>
           </div>
+
           <!-- right part -->
+
           <div class="flex flex-col gap-6">
+            <div
+              class="bg-white flex xl:hidden items-center justify-center rounded-[57px]"
+            >
+              <div
+                class="flex items-center justify-center flex-row gap-10 p-6 text-2xl"
+              >
+                <i class="fa-solid fa-rotate"></i>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <i class="fa-regular fa-thumbs-down transform -scale-x-100"></i>
+                <i class="fa-regular fa-clipboard"></i>
+                <i class="fa-solid fa-volume-low"></i>
+              </div>
+            </div>
+
             <div class="p-[30px] bg-[#EFEFEF] rounded-[20px]">
-              <h3 class="font_mano text-[32px] font-bold">
+              <h3 class="font_mano text-xl md:text-[32px] font-bold mb-5">
                 Real-time Analysis
               </h3>
 
@@ -300,10 +321,9 @@
                   </p>
                 </div>
 
-                <!-- Progress Bar -->
                 <div class="flex gap-2 items-center">
                   <div
-                    class="relative w-[443px] h-2 rounded-full bg-[#DFDFDF] overflow-hidden"
+                    class="relative w-[160px] sm:w-[200px] xl:w-[443px] h-2 rounded-full bg-[#DFDFDF] overflow-hidden"
                   >
                     <div
                       class="absolute top-0 left-0 h-full bg-green-500 rounded-full"
@@ -327,7 +347,7 @@
               </div>
             </div>
 
-            <div class="p-[30px] bg-[#EFEFEF] rounded-[20px]">
+            <!-- <div class="p-[30px] bg-[#EFEFEF] rounded-[20px]">
               <h3 class="font_mano text-[32px] font-bold">Quick Actions</h3>
               <div class="flex gap-5 mt-5">
                 <div
@@ -359,35 +379,45 @@
                   </p>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Our courses section -->
+    <!--================= Our courses section ================-->
     <section id="course" class="pt-[50px] pb-10">
-      <div class="my-container">
+      <div class="myContainer px-4 xl:px-0">
         <div
           class="heading-part font_mano leading-[150%] flex justify-between items-end"
         >
           <div>
-            <h2 class="font-semibold text-5xl mb-[6px]">Our Courses</h2>
-            <p class="max-w-[1000px] text-[#59595A] font-normal text-lg">
+            <h2 class="font-semibold text-3xl sm:text-5xl mb-[6px]">
+              Our Courses
+            </h2>
+            <p
+              class="max-w-[550px] md:max-w-[620px] lg:max-w-[800px] xl:max-w-[1000px] text-[#59595A] font-normal text-base md:text-lg"
+            >
               Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
               eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac
               cum eget habitasse in velit fringilla feugiat senectus in.
             </p>
           </div>
           <div
-            class="bg-[#002868] px-6 py-[18px] text-lg font-medium text-white rounded-lg"
+            class="hidden md:block bg-[#002868] px-6 py-[18px] text-lg font-medium text-white rounded-lg"
           >
             View All
           </div>
         </div>
 
-        <div class="mt-12 flex gap-[30px]">
-          <div class="p-[50px] bg-[#F0F0F0] rounded-[15px]">
+        <div
+          class="md:hidden mt-10 inline-block bg-[#002868] px-6 py-[18px] text-lg font-medium text-white rounded-lg"
+        >
+          View All
+        </div>
+
+        <div class="mt-12 flex flex-col md:flex-row gap-[30px]">
+          <div class="p-5 lg:p-[50px] bg-[#F0F0F0] rounded-[15px]">
             <div class="image rounded-[15px] overflow-hidden mb-[30px]">
               <img
                 src="./images/course01.jpg"
@@ -395,14 +425,21 @@
                 class="object-cover"
               />
             </div>
-            <div class="flex justify-between items-center mb-[30px]">
+            <div
+              class="flex justify-between items-center gap-4 md:gap-0 mb-[30px]"
+            >
               <div
-                class="flex gap-[10px] font_mano text-lg font-medium text-[#4C4C4D]"
+                class="flex flex-col md:flex-row gap-[10px] font_mano text-base lg:text-lg font-medium text-[#4C4C4D]"
               >
-                <div class="bg-white px-4 py-[10px] rounded-lg">4 Weeks</div>
-                <div class="bg-white px-4 py-[10px] rounded-lg">Beginner</div>
+                <div class="bg-white px-2 lg:px-4 py-[10px] rounded-lg">
+                  4 Weeks
+                </div>
+                <div class="bg-white px-2 lg:px-4 py-[10px] rounded-lg">
+                  Beginner
+                </div>
               </div>
-              <span class="text-[#262626] font_mano text-xl font-medium"
+              <span
+                class="text-[#262626] font_mano text-base lg:text-xl font-medium"
                 >By John Smith</span
               >
             </div>
@@ -412,7 +449,7 @@
               Web Design Fundamentals
             </h4>
             <p
-              class="max-w-[580px] text-[#4C4C4D] text-lg font_mano leading-[150%] mb-[30px]"
+              class="max-w-[580px] text-[#4C4C4D] text-base md:text-lg font_mano leading-[150%] mb-[30px]"
             >
               Learn the fundamentals of web design, including HTML, CSS, and
               responsive design principles. Develop the skills to create
@@ -425,7 +462,7 @@
             </div>
           </div>
 
-          <div class="p-[50px] bg-[#F0F0F0] rounded-[15px]">
+          <div class="p-5 lg:p-[50px] bg-[#F0F0F0] rounded-[15px]">
             <div class="image rounded-[15px] overflow-hidden mb-[30px]">
               <img
                 src="./images/course02.jpg"
@@ -433,14 +470,21 @@
                 class="object-cover"
               />
             </div>
-            <div class="flex justify-between items-center mb-[30px]">
+            <div
+              class="flex justify-between items-center gap-4 md:gap-0 mb-[30px]"
+            >
               <div
-                class="flex gap-[10px] font_mano text-lg font-medium text-[#4C4C4D]"
+                class="flex flex-col md:flex-row gap-[10px] font_mano text-base lg:text-lg font-medium text-[#4C4C4D]"
               >
-                <div class="bg-white px-4 py-[10px] rounded-lg">4 Weeks</div>
-                <div class="bg-white px-4 py-[10px] rounded-lg">Beginner</div>
+                <div class="bg-white px-2 lg:px-4 py-[10px] rounded-lg">
+                  4 Weeks
+                </div>
+                <div class="bg-white px-2 lg:px-4 py-[10px] rounded-lg">
+                  Beginner
+                </div>
               </div>
-              <span class="text-[#262626] font_mano text-xl font-medium"
+              <span
+                class="text-[#262626] font_mano text-base lg:text-xl font-medium"
                 >By John Smith</span
               >
             </div>
@@ -450,7 +494,7 @@
               Web Design Fundamentals
             </h4>
             <p
-              class="max-w-[580px] text-[#4C4C4D] text-lg font_mano leading-[150%] mb-[30px]"
+              class="max-w-[580px] text-[#4C4C4D] text-base md:text-lg font_mano leading-[150%] mb-[30px]"
             >
               Learn the fundamentals of web design, including HTML, CSS, and
               responsive design principles. Develop the skills to create
@@ -466,77 +510,107 @@
       </div>
     </section>
 
-    <!-- collaborating section -->
-    <section id="collaborate" class="pt-[124px] mb-10">
-      <div class="my-container">
+    <!--============== collaborating section ================-->
+    <section id="collaborate" class="mt-20 lg:pt-24 xl:pt-[124px] mb-10">
+      <div class="myContainer px-4 xl:px-0">
         <!-- header -->
-        <div class="header flex items-start gap-[30px] mb-[80px]">
+        <div
+          class="header flex items-start flex-col lg:flex-row gap-[30px] mb-[80px]"
+        >
           <p
-            class="max-w-[280px] font_ques text-[#001C4A] text-2xl tracking-[-0.01em]"
+            class="max-w-[280px] font_ques text-[#001C4A] text-lg md:text-2xl tracking-[-0.01em]"
           >
             Frequently asked questions
           </p>
           <h3
-            class="max-w-[920px] text-[#111111] font_ques text-[60px] leading-[120%] tracking-[-0.01em]"
+            class="max-w-[920px] text-[#111111] font_ques text-3xl lg:text-5xl xl:text-5xl leading-[120%] tracking-[-0.01em]"
           >
             Constant collaboration is how we roll. Let's see if we are a good
             fit.
           </h3>
         </div>
 
-        <div class="mb-10 flex items-center font_ques justify-between gap-10">
-          <div class="text-[#8B7D4C] text-[32px]">01</div>
-          <div class="w-[1280px]">
-            <h4
-              class="font_ques text-[40px] tracking-[-0.01em] text-[#111111] mb-3"
-            >
-              Why should I choose Humestic?
-            </h4>
-            <p
-              class="max-w-[1210px] font_inter text-base leading-[140%] tracking-[-0.02em] font-light"
-            >
-              Bottleneck mice my capacity is full, nor incentivization we need
-              to start advertising on social media, or helicopter view, for what
-              the. Let's put a pin in that we need to build it so that it
-              scales, are there any leftovers in the kitchen?, if you're not
-              hurting you're not winning loop back
-            </p>
+        <div class="flex flex-col justify-start">
+          <div
+            class="mb-5 md:mb-10 flex flex-col md:flex-row items-center font_ques justify-between gap-3 md:gap-10"
+          >
+            <div class="flex gap-10">
+              <div class="text-[#8B7D4C] text-2xl lg:text-[32px]">01</div>
+              <div class="max-w-[1280px]">
+                <h4
+                  class="font_ques text-2xl md:text-3xl lg:text-[40px] tracking-[-0.01em] text-[#111111] mb-3"
+                >
+                  Why should I choose Humestic?
+                </h4>
+                <p
+                  class="max-w-[1210px] font_inter text-sm md:text-base leading-[140%] tracking-[-0.02em] font-light"
+                >
+                  Bottleneck mice my capacity is full, nor incentivization we
+                  need to start advertising on social media, or helicopter view,
+                  for what the. Let's put a pin in that we need to build it so
+                  that it scales, are there any leftovers in the kitchen?, if
+                  you're not hurting you're not winning loop back
+                </p>
+              </div>
+            </div>
+            <div class="hidden md:block text-2xl lg:text-[32px]">
+              <i class="fa-solid fa-plus"></i>
+            </div>
           </div>
-          <div class="text-[40px]"><i class="fa-solid fa-plus"></i></div>
-        </div>
 
-        <hr class="h-[1px] bg-[#CCCCCC]" />
+          <hr class="h-[1px] bg-[#CCCCCC] mb-5 md:mb-10" />
 
-        <div class="my-10 flex items-center font_ques justify-between gap-10">
-          <div class="text-[#8B7D4C] text-[32px]">02</div>
-          <div class="w-[1280px] text-[40px] tracking-[-0.01em]">
-            I like your works, how do we start a project?
+          <div
+            class="mb-5 md:mb-10 flex flex-col md:flex-row items-center font_ques justify-between gap-3 md:gap-10"
+          >
+            <div class="flex gap-10">
+              <div class="text-[#8B7D4C] text-2xl lg:text-[32px]">01</div>
+              <div class="max-w-[1280px]">
+                <h4
+                  class="font_ques text-2xl md:text-3xl lg:text-[40px] tracking-[-0.01em] text-[#111111] mb-3"
+                >
+                  I like your works, how do we start a project?
+                </h4>
+              </div>
+            </div>
+            <div class="hidden md:block text-2xl lg:text-[32px]">
+              <i class="fa-solid fa-minus"></i>
+            </div>
           </div>
-          <div class="text-[40px]"><i class="fa-solid fa-minus"></i></div>
-        </div>
 
-        <hr class="h-[1px] bg-[#CCCCCC]" />
+          <hr class="h-[1px] bg-[#CCCCCC] mb-5 md:mb-10" />
 
-        <div class="my-10 flex items-center font_ques justify-between gap-10">
-          <div class="text-[#8B7D4C] text-[32px]">03</div>
-          <div class="w-[1280px] text-[40px] tracking-[-0.01em]">
-            What info is required to get a quotation?
+          <div
+            class="mb-5 md:mb-10 flex flex-col md:flex-row items-center font_ques justify-between gap-3 md:gap-10"
+          >
+            <div class="flex gap-10">
+              <div class="text-[#8B7D4C] text-2xl lg:text-[32px]">03</div>
+              <div class="max-w-[1280px]">
+                <h4
+                  class="font_ques text-2xl md:text-3xl lg:text-[40px] tracking-[-0.01em] text-[#111111] mb-3"
+                >
+                  What info is required to get a quotation?
+                </h4>
+              </div>
+            </div>
+            <div class="hidden md:block text-2xl lg:text-[32px]">
+              <i class="fa-solid fa-minus"></i>
+            </div>
           </div>
-          <div class="text-[40px]"><i class="fa-solid fa-minus"></i></div>
-        </div>
 
-        <hr class="h-[1px] bg-[#CCCCCC]" />
+          <hr class="h-[1px] bg-[#CCCCCC] mb-5 md:mb-10" />
+        </div>
       </div>
     </section>
 
     <!-- slider section -->
     <section id="slider" class="bg-[#FAFAFA] pt-[115px] pb-[84px] mb-7">
-      <div class="w-[1280px] mx-auto relative">
+      <div class="max-w-[1280px] mx-auto px-10 xl:px-0 relative">
         <div class="w-full slide-container overflow-hidden">
           <div class="slider transform duration-500 ease-in-out flex">
             <div class="slide min-w-full active">
               <p
-                class="max-w-[1220px] text-4xl font_mano font-semibold leading-[160%] tracking-[-0.03em] text-[#010205] mb-[74px]"
+                class="max-w-[1220px] text-xl xl:text-4xl font_mano font-semibold leading-[160%] tracking-[-0.03em] text-[#010205] mb-[74px]"
               >
                 “ They thoroughly analyze our industry and target audience,
                 allowing them to develop customized campaigns that effectively
@@ -548,7 +622,7 @@
               <div class="flex items-center justify-between">
                 <div class="flex gap-6 items-center">
                   <div
-                    class="flex items-center justify-center w-[70px] h-[70px] bg-[#C8C8C8] rounded-full"
+                    class="flex items-center justify-center w-12 h-12 lg:w-[70px] lg:h-[70px] bg-[#C8C8C8] rounded-full"
                   ></div>
                   <div class="text flex flex-col font_mano">
                     <p class="text-xl font-bold leading-[180%] text-[#010205]">
@@ -563,9 +637,9 @@
                 </div>
               </div>
             </div>
-            <div class="slide min-w-full">
+            <div class="slide min-w-full active">
               <p
-                class="max-w-[1220px] text-4xl font_mano font-semibold leading-[160%] tracking-[-0.03em] text-[#010205] mb-[74px]"
+                class="max-w-[1220px] text-xl xl:text-4xl font_mano font-semibold leading-[160%] tracking-[-0.03em] text-[#010205] mb-[74px]"
               >
                 “ They thoroughly analyze our industry and target audience,
                 allowing them to develop customized campaigns that effectively
@@ -577,7 +651,7 @@
               <div class="flex items-center justify-between">
                 <div class="flex gap-6 items-center">
                   <div
-                    class="flex items-center justify-center w-[70px] h-[70px] bg-[#C8C8C8] rounded-full"
+                    class="flex items-center justify-center w-12 h-12 lg:w-[70px] lg:h-[70px] bg-[#C8C8C8] rounded-full"
                   ></div>
                   <div class="text flex flex-col font_mano">
                     <p class="text-xl font-bold leading-[180%] text-[#010205]">
@@ -592,9 +666,9 @@
                 </div>
               </div>
             </div>
-            <div class="slide min-w-full">
+            <div class="slide min-w-full active">
               <p
-                class="max-w-[1220px] text-4xl font_mano font-semibold leading-[160%] tracking-[-0.03em] text-[#010205] mb-[74px]"
+                class="max-w-[1220px] text-xl xl:text-4xl font_mano font-semibold leading-[160%] tracking-[-0.03em] text-[#010205] mb-[74px]"
               >
                 “ They thoroughly analyze our industry and target audience,
                 allowing them to develop customized campaigns that effectively
@@ -606,7 +680,7 @@
               <div class="flex items-center justify-between">
                 <div class="flex gap-6 items-center">
                   <div
-                    class="flex items-center justify-center w-[70px] h-[70px] bg-[#C8C8C8] rounded-full"
+                    class="flex items-center justify-center w-12 h-12 lg:w-[70px] lg:h-[70px] bg-[#C8C8C8] rounded-full"
                   ></div>
                   <div class="text flex flex-col font_mano">
                     <p class="text-xl font-bold leading-[180%] text-[#010205]">
@@ -621,9 +695,9 @@
                 </div>
               </div>
             </div>
-            <div class="slide min-w-full">
+            <div class="slide min-w-full active">
               <p
-                class="max-w-[1220px] text-4xl font_mano font-semibold leading-[160%] tracking-[-0.03em] text-[#010205] mb-[74px]"
+                class="max-w-[1220px] text-xl xl:text-4xl font_mano font-semibold leading-[160%] tracking-[-0.03em] text-[#010205] mb-[74px]"
               >
                 “ They thoroughly analyze our industry and target audience,
                 allowing them to develop customized campaigns that effectively
@@ -635,7 +709,7 @@
               <div class="flex items-center justify-between">
                 <div class="flex gap-6 items-center">
                   <div
-                    class="flex items-center justify-center w-[70px] h-[70px] bg-[#C8C8C8] rounded-full"
+                    class="flex items-center justify-center w-12 h-12 lg:w-[70px] lg:h-[70px] bg-[#C8C8C8] rounded-full"
                   ></div>
                   <div class="text flex flex-col font_mano">
                     <p class="text-xl font-bold leading-[180%] text-[#010205]">
@@ -650,9 +724,9 @@
                 </div>
               </div>
             </div>
-            <div class="slide min-w-full">
+            <div class="slide min-w-full active">
               <p
-                class="max-w-[1220px] text-4xl font_mano font-semibold leading-[160%] tracking-[-0.03em] text-[#010205] mb-[74px]"
+                class="max-w-[1220px] text-xl xl:text-4xl font_mano font-semibold leading-[160%] tracking-[-0.03em] text-[#010205] mb-[74px]"
               >
                 “ They thoroughly analyze our industry and target audience,
                 allowing them to develop customized campaigns that effectively
@@ -664,7 +738,7 @@
               <div class="flex items-center justify-between">
                 <div class="flex gap-6 items-center">
                   <div
-                    class="flex items-center justify-center w-[70px] h-[70px] bg-[#C8C8C8] rounded-full"
+                    class="flex items-center justify-center w-12 h-12 lg:w-[70px] lg:h-[70px] bg-[#C8C8C8] rounded-full"
                   ></div>
                   <div class="text flex flex-col font_mano">
                     <p class="text-xl font-bold leading-[180%] text-[#010205]">
@@ -683,21 +757,29 @@
         </div>
 
         <!-- arrow left right part -->
-        <div class="flex items-center gap-[38px] absolute bottom-0 right-0">
+        <div
+          class="flex items-center gap-[38px] absolute bottom-[-60px] right-5 md:bottom-0 xl:right-0"
+        >
           <div
-            class="prev w-[88px] h-14 flex items-center justify-center border border-[#00245F] rounded-[70px] text-2xl text-[#00245F] cursor-pointer hover:bg-[#00245F] hover:text-white hover:border-transparent transition-all duration-500"
+            class="prev md:w-[88px] w-14 h-10 md:h-14 flex items-center justify-center border border-[#00245F] rounded-[70px] text-2xl text-[#00245F] cursor-pointer hover:bg-[#00245F] hover:text-white hover:border-transparent transition-all duration-500"
           >
             <i class="fa-solid fa-arrow-left"></i>
           </div>
 
           <div class="font_mano font-semibold text-xl leading-[180%] flex">
-            <button class="prevText underline text-[#00245F] w-8 select-none">01</button>
+            <button class="prevText underline text-[#00245F] w-8 select-none">
+              01
+            </button>
             /
-            <button class="nextText text-[#01020567] w-8 text-right select-none">05</button>
+            <button
+              class="nextText text-[#01020567] w-8 text-right select-none"
+            >
+              05
+            </button>
           </div>
 
           <div
-            class="next w-[88px] h-14 flex items-center justify-center border border-[#00245F] rounded-[70px] text-2xl text-[#00245F] cursor-pointer hover:bg-[#00245F] hover:text-white hover:border-transparent transition-all duration-500"
+            class="next md:w-[88px] w-14 h-10 md:h-14 flex items-center justify-center border border-[#00245F] rounded-[70px] text-2xl text-[#00245F] cursor-pointer hover:bg-[#00245F] hover:text-white hover:border-transparent transition-all duration-500"
           >
             <i class="fa-solid fa-arrow-right"></i>
           </div>
@@ -706,58 +788,129 @@
     </section>
 
     <!-- hire section -->
-     <section id="hire" class="bg-[#FAFAFA] py-8">
-      <div class="my-container gradient-bg rounded-3xl text-center py-[80px] font_mano">
-        <h2 class="font-semibold text-[38px] leading-[130%] text-white mb-3">Ready to Hire Smarter?</h2>
-        <p class="text-[#B9BDC7] text-base leading-[160%] mb-12">Unlock Exclusive Insights Subscribe to Our Newsletter</p>
-        <button class="text-[#00245F] bg-[#FCE38A] py-4 px-9 text-base font-medium leading-[160%] rounded-[50px]">Join Now</button>
+    <section id="hire" class="bg-[#FAFAFA] py-8">
+      <div
+        class="myContainer px-4 xl:px-0 gradient-bg rounded-3xl text-center py-[80px] font_mano"
+      >
+        <h2
+          class="font-semibold text-2xl md:text-[38px] leading-[130%] text-white mb-3"
+        >
+          Ready to Hire Smarter?
+        </h2>
+        <p class="text-[#B9BDC7] text-base leading-[160%] mb-12">
+          Unlock Exclusive Insights Subscribe to Our Newsletter
+        </p>
+        <button
+          class="text-[#00245F] bg-[#FCE38A] py-4 px-9 text-base font-medium leading-[160%] rounded-[50px]"
+        >
+          Join Now
+        </button>
       </div>
-     </section>
+    </section>
 
-     <!-- footer section -->
-      <footer id="footer" class="bg-[#FAFAFA] pt-[112px] pb-[130px]" >
-        <div class="my-container grid grid-cols-1 md:grid-cols-2 justify-between mb-10">
-          <div class="col-span-1 flex flex-col gap-[30px]">
-            <div class="logo"><img src="./images/footer-logo.png" alt="image" class="object-cover"></div>
-            <p class="max-w-[518px] text-[#335386] text-sm font_mano leading-[24px]  ">SalesRank.AI offers a comprehensive suite of AI-powered solutions to help you find expert sales professionals who can elevate every aspect of your business. From performance rankings and skill verification to industry benchmarking and real-time analytics, we provide the insights and tools to optimize your sales strategy and drive growth.</p>
+    <!-- footer section -->
+    <footer id="footer" class="bg-[#FAFAFA] pt-[112px] pb-[130px]">
+      <div
+        class="myContainer px-4 xl:px-0 grid grid-cols-1 md:grid-cols-2 justify-between gap-10 mb-10"
+      >
+        <div class="col-span-1 flex flex-col gap-[30px]">
+          <div class="logo">
+            <img
+              src="./images/footer-logo.png"
+              alt="image"
+              class="object-cover"
+            />
+          </div>
+          <p
+            class="max-w-[518px] text-[#335386] text-sm font_mano leading-[24px]"
+          >
+            SalesRank.AI offers a comprehensive suite of AI-powered solutions to
+            help you find expert sales professionals who can elevate every
+            aspect of your business. From performance rankings and skill
+            verification to industry benchmarking and real-time analytics, we
+            provide the insights and tools to optimize your sales strategy and
+            drive growth.
+          </p>
+
+          <div class="flex gap-3">
+            <div
+              class="w-[34px] h-[34px] bg-white rounded-full flex items-center justify-center"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div
+              class="w-[34px] h-[34px] bg-white rounded-full flex items-center justify-center"
+            >
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div
+              class="w-[34px] h-[34px] bg-white rounded-full flex items-center justify-center"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div
+              class="w-[34px] h-[34px] bg-white rounded-full flex items-center justify-center"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-span-1 font_mano flex gap-3 md:gap-10 xl:gap-[115px] xl:ml-28"
+        >
+          <div>
+            <h4 class="text-lg text-[#001C4A] font-semibold tracking-[-0.01em]">
+              Navigation
+            </h4>
+            <ul
+              class="mt-9 text-sm tracking-[-0.02em] text-[#335386] flex flex-col gap-4"
+            >
+              <li>Service</li>
+              <li>Agency</li>
+              <li>Case Study</li>
+              <li>Resource</li>
+              <li>Contact</li>
+            </ul>
           </div>
 
-          <div class="col-span-1 font_mano flex gap-[115px] md:ml-28 ">
-            <div>
-              <h4 class="text-lg text-[#001C4A] font-semibold tracking-[-0.01em]">Navigation</h4>
-              <ul class="mt-9 text-sm tracking-[-0.02em] text-[#335386] flex flex-col gap-4">
-                <li>Service</li>
-                <li>Agency</li>
-                <li>Case Study</li>
-                <li>Resource</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 class="text-lg text-[#001C4A] font-semibold tracking-[-0.01em]">Licence</h4>
-              <ul class="mt-9 text-sm tracking-[-0.02em] text-[#335386] flex flex-col gap-4">
-                <li>Privacy Policy</li>
-                <li>Copyright</li>
-                <li>Email Address</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 class="text-lg text-[#001C4A] font-semibold tracking-[-0.01em]">Contact </h4>
-              <ul class="mt-9 text-sm tracking-[-0.02em] text-[#335386] flex flex-col gap-4">
-                <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-6"></i> (406) 555-0120</li>
-                <li class="flex items-center gap-2"> <i class="fa-solid fa-envelope text-6"></i>Hey@boostim.com</li>
-                <li class="flex items-center gap-2"> <i class="fa-solid fa-location-dot text-6"></i>2972 Westheimer Rd. Santa Ana, Illinois 85486</li>
-              </ul>
-            </div>
+          <div>
+            <h4 class="text-lg text-[#001C4A] font-semibold tracking-[-0.01em]">
+              Licence
+            </h4>
+            <ul
+              class="mt-9 text-sm tracking-[-0.02em] text-[#335386] flex flex-col gap-4"
+            >
+              <li>Privacy Policy</li>
+              <li>Copyright</li>
+              <li>Email Address</li>
+            </ul>
           </div>
-        </div> 
-        
-        <hr class="bg-[#B4B4B4] h-[1px]">
-      </footer>
 
-      
+          <div>
+            <h4 class="text-lg text-[#001C4A] font-semibold tracking-[-0.01em]">
+              Contact
+            </h4>
+            <ul
+              class="mt-9 text-sm tracking-[-0.02em] text-[#335386] flex flex-col gap-4"
+            >
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-phone text-6"></i> (406) 555-0120
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-envelope text-6"></i>Hey@boostim.com
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-location-dot text-6"></i>2972 Westheimer
+                Rd. Santa Ana, Illinois 85486
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr class="bg-[#B4B4B4] h-[1px]" />
+    </footer>
 
     <script src="script.js"></script>
   </body>

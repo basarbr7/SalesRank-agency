@@ -1,5 +1,5 @@
-// script.js
 
+//  mobile menu toggle part
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
@@ -9,36 +9,35 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+// navbar part 
+  const navbar = document.querySelector("#nav")
+  window.addEventListener("scroll", (e)=>{
+    let scrolly = window.scrollY
+    if(scrolly>100){
+      navbar.classList.add("fixed", "top-0", "header-animation")
+      navbar.classList.remove("absolute");
+      navbar.classList.add("bg-[#B9B9B9]");
+      navbar.classList.remove("mt-[30px]")
 
-//   const navbar = document.querySelector("#nav")
-//   window.addEventListener("scroll", (e)=>{
-//     let scrolly = window.scrollY
-//     if(scrolly>100){
-//       navbar.classList.add("fixed", "top-0", "header-animation")
-//       navbar.classList.remove("absolute");
-//     }else{
-//       navbar.classList.remove("fixed", "top-0", "header-animation")
-//       navbar.classList.add("absolute");
-//     }
+    }else{
+      navbar.classList.remove("fixed", "top-0", "header-animation")
+      navbar.classList.add("absolute");
+      navbar.classList.remove("bg-[#B9B9B9]")
+      navbar.classList.add("mt-[30px]")
+    }
     
-//   })
+  })
 
-   // Smooth scroll 
-   const anchorsAll = document.querySelectorAll('a[href^="#"]')
 
-   anchorsAll.forEach(anchor => {
-     anchor.addEventListener('click', function (e) {
-       e.preventDefault();
-       const target = document.querySelector(this.getAttribute('href'));
-       const navbarHeight = 60;
-       const top = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
-       
-       window.scrollTo({
-         top,
-         behavior: 'smooth'
-       });
-     });
-   });
+  // chat part
+
+  const input = document.querySelector("input")
+  const submitBtn =document.querySelector(".submit_btn")
+  const output = document.querySelector("#output")
+
+  
+
+
 
 
   //  slider part
@@ -74,6 +73,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   updateSlider(currentIndex);
+
+
+
+
 
 
 
