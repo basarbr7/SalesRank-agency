@@ -28,10 +28,12 @@
   </head>
 
   <body class="scroll-smooth relative">
-
     <div class="absolute top-[-220px] left-[-245px] rs-gradient"></div>
     <!--================= navbar section ===================-->
-    <nav id="nav" class="mt-[30px] py-4 px-3 lg:px-0 md:px-0 z-50 absolute w-full top-0">
+    <nav
+      id="nav"
+      class="mt-[30px] py-4 px-3 lg:px-0 md:px-0 z-50 absolute w-full top-0"
+    >
       <div class="myContainer px-4 xl:px-0 flex justify-between items-center">
         <!-- Left: Logo & Links -->
         <div class="flex items-center justify-between md:gap-5 lg:gap-[74px]">
@@ -72,7 +74,10 @@
       </div>
 
       <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden px-4 mt-3 hidden flex-col gap-2">
+      <div
+        id="mobile-menu"
+        class="bgmain md:hidden px-10 -mb-4 -mx-4 py-10 mt-3 hidden flex-col gap-2"
+      >
         <a href="#home" class="block py-2 hover:bg-gray-200 rounded">Home</a>
         <a href="#about" class="block py-2 hover:bg-gray-200 rounded">About</a>
         <a href="#contact" class="block py-2 hover:bg-gray-200 rounded"
@@ -224,15 +229,19 @@
               AI Sales Coach
             </div>
             <div class="px-4 py-5 pb-[30px] h-[300px] overflow-hidden">
-              <div id="output" class="flex flex-col gap-4 overflow-y-auto pr-2 h-full ">
+              <div
+                id="output"
+                class="flex flex-col gap-4 overflow-y-auto pr-2 h-full"
+              >
                 <div class="flex items-start gap-6">
                   <div class="w-10 h-10 bg-[#D9D9D9] rounded-full"></div>
-                  <div class="bg-white px-4 py-2 rounded-lg text-base md:text-lg font_lato leading-8 max-w-[70%] md:max-w-[85%]">
+                  <div
+                    class="bg-white px-4 py-2 rounded-lg text-base md:text-lg font_lato leading-8 max-w-[70%] md:max-w-[85%]"
+                  >
                     Hello! I'm your AI sales coach. How can I help you improve
                     your sales performance today?
                   </div>
                 </div>
-
               </div>
             </div>
 
@@ -271,7 +280,8 @@
                   placeholder="Ask anything you need"
                   class="flex-1 px-3 md:px-[23px] py-[17px] border border-[#E5E7EB] rounded text-sm focus:outline-none"
                 />
-                <button id="submit_btn"
+                <button
+                  id="submit_btn"
                   class="bg-[#002868] text-white p-[10px] sm:p-[14px] rounded-lg text-lg font_gest leading-[100%] tracking-[-0.04em] font-medium text-center"
                 >
                   <span>Send</span>

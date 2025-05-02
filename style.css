@@ -1,103 +1,99 @@
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    --color-bg-main: #E7E7E7;
-    --color-white: #FFFFFF;
-    --color-blue: #002868;
-    --color-dark-blue: #171D25;
-    --color-green: #06B217;
-    --color-light-green: #44D618;
-    --color-gray: #6D6D6D;
-    --color-light-gray: #909090;
-    --color-light: #DFDFDF;
-    --font-family-mano: "Manrope", sans-serif;
-    --font-family-poppins:  "Poppins", sans-serif;
-    --font-family-ques: "Questrial", sans-serif;
-    --font-family-lato: "Lato", sans-serif;
-    --font-family-gest: "Geist", sans-serif;
-    --font-family-vet: "Be Vietnam Pro", sans-serif;
-    --font-family-inter: "Inter", sans-serif;;
+:root {
+  --color-bg-main: #e7e7e7;
+  --color-white: #ffffff;
+  --color-blue: #002868;
+  --color-dark-blue: #171d25;
+  --color-green: #06b217;
+  --color-light-green: #44d618;
+  --color-gray: #6d6d6d;
+  --color-light-gray: #909090;
+  --color-light: #dfdfdf;
+  --font-family-mano: "Manrope", sans-serif;
+  --font-family-poppins: "Poppins", sans-serif;
+  --font-family-ques: "Questrial", sans-serif;
+  --font-family-lato: "Lato", sans-serif;
+  --font-family-gest: "Geist", sans-serif;
+  --font-family-vet: "Be Vietnam Pro", sans-serif;
+  --font-family-inter: "Inter", sans-serif;
 }
-
 
 .header-animation {
-    animation: headerSticky 0.7s ease-in-out forwards;
+  animation: headerSticky 0.7s ease-in-out forwards;
 }
 
 @keyframes headerSticky {
-    0% {
-        transform: translateY(-100%);
-        -webkit-transform: translateY(-100%);
-        -moz-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-        -o-transform: translateY(-100%);
-    }
+  0% {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+  }
 
-    100% {
-        transform: translateY(0);
-        -webkit-transform: translateY(0);
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -o-transform: translateY(0);
-    }
-}  
-
-.bgmain{
-    background-color: var(--color-bg-main);
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
 }
 
-.myContainer{
-    max-width: 1440px;
-    margin: 0 auto;
-}
-.font_mano{
-    font-family: var(--font-family);
-}
-.font_pop{
-    font-family: var(--font-family-poppins);
-}
-.font_ques{
-    font-family: var(--font-family-ques);
-}
-.font_lato{
-    font-family: var(--font-family-lato);
-}
-.font_gest{
-    font-family: var(--font-family-gest);
-}
-.font_vet{
-    font-family: var(--font-family-vet);
-}
-.font_inter{
-    font-family: var(--font-family-inter);
+.bgmain {
+  background-color: var(--color-bg-main);
 }
 
-.gradient-bg{
-    background: linear-gradient(to right, #103570 0% , #004FCE 100% );
+.myContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.font_mano {
+  font-family: var(--font-family);
+}
+.font_pop {
+  font-family: var(--font-family-poppins);
+}
+.font_ques {
+  font-family: var(--font-family-ques);
+}
+.font_lato {
+  font-family: var(--font-family-lato);
+}
+.font_gest {
+  font-family: var(--font-family-gest);
+}
+.font_vet {
+  font-family: var(--font-family-vet);
+}
+.font_inter {
+  font-family: var(--font-family-inter);
+}
+
+.gradient-bg {
+  background: linear-gradient(to right, #103570 0%, #004fce 100%);
 }
 
 .slider {
-    display: none;
-  }
+  display: none;
+}
 
-  .slider.active {
-    display: block;
-  }
+.slider.active {
+  display: block;
+}
 
-
-
-  .rs-gradient{
-    width: 655px;
-    height: 655px;
-    background: #6797FF;
-    border-radius: 500px;
-    filter: blur(1000px);
-  }
+.rs-gradient {
+  width: 655px;
+  height: 655px;
+  background: #6797ff;
+  border-radius: 500px;
+  filter: blur(1000px);
+}
 
 /* tracking-[-0.04em] */
 
