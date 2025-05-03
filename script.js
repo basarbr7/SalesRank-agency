@@ -87,3 +87,30 @@ nextBtn.addEventListener("click", () => {
 });
 
 updateSlider(currentIndex);
+
+
+// collapse part
+
+const collapseBtn = document.querySelectorAll(".collapse_Icon")
+
+let collapse = false
+collapseBtn.forEach(btn =>{
+  btn.addEventListener("click", ()=>{
+    const collapseItem = btn.closest(".flex").querySelector(".collapse_Item")
+    const icon = btn.querySelector("i")
+    if(!collapse){
+      collapseItem.classList.add("hidden")
+      icon.classList.add("fa-minus")
+      icon.classList.remove("fa-plus")
+
+      collapse = true
+    }else{
+      collapseItem.classList.remove("hidden")
+      icon.classList.add("fa-plus")
+      icon.classList.remove("fa-minus")
+      collapse= false
+    }
+  })
+})
+
+
