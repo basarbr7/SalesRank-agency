@@ -55,7 +55,7 @@
   margin: 0 auto;
 }
 .font_mano {
-  font-family: var(--font-family);
+  font-family: var(--font-family-mano);
 }
 .font_pop {
   font-family: var(--font-family-poppins);
